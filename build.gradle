@@ -28,6 +28,16 @@ task stopInstance(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+task createInstanceGroup(type: JavaExec) {
+    main = 'CreateInstanceGroup'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task deleteInstanceGroup(type: JavaExec) {
+    main = 'DeleteInstanceGroup'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
 test {
     useJUnitPlatform()
 }
