@@ -34,7 +34,7 @@ task createInstanceGroup(type: JavaExec) {
 }
 
 task deleteInstanceGroup(type: JavaExec) {
-    main = 'DeleteInstanceGroup'
+    main = 'DeleteManagedInstanceGroup'
     classpath = sourceSets.main.runtimeClasspath
 }
 
