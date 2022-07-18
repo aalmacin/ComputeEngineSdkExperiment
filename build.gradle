@@ -23,6 +23,11 @@ task createInstance(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+task stopInstance(type: JavaExec) {
+    main = 'StopInstance'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
 test {
     useJUnitPlatform()
 }
