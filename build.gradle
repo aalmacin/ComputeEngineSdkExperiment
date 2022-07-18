@@ -29,7 +29,7 @@ task stopInstance(type: JavaExec) {
 }
 
 task createInstanceGroup(type: JavaExec) {
-    main = 'CreateInstanceGroup'
+    main = 'CreateManagedInstanceGroup'
     classpath = sourceSets.main.runtimeClasspath
 }
 
