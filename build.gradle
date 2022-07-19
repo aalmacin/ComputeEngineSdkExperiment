@@ -38,6 +38,11 @@ task deleteInstanceGroup(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+task scaleIG(type: JavaExec) {
+    main = 'UpdateInstanceGroupTargetCount'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
 test {
     useJUnitPlatform()
 }
