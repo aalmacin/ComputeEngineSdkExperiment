@@ -13,17 +13,8 @@ public class UpdateInstanceGroupTargetCount {
         String instanceGroupName = "experiment-managed-instance-group";
 
         try (InstanceGroupManagersClient instanceGroupManagersClient = InstanceGroupManagersClient.create()) {
-            GetInstanceGroupManagerRequest getInstanceGroupManagerRequest = GetInstanceGroupManagerRequest.newBuilder()
-                    .setInstanceGroupManager(instanceGroupName)
-                    .setZone(zone)
-                    .setProject(project)
-                    .build();
-            InstanceGroupManager instanceGroupManager = instanceGroupManagersClient.get(getInstanceGroupManagerRequest);
             InstanceGroupManager updatedInstanceGroupManager = InstanceGroupManager.newBuilder()
-                    .setName(instanceGroupName)
-                    .setInstanceTemplateBytes(instanceGroupManager.getInstanceTemplateBytes())
-                    .setZone(zone)
-                    .setTargetSize(2)
+                    .setTargetSize(0)
                     .build();
             PatchInstanceGroupManagerRequest patchInstanceGroupManagerRequest = PatchInstanceGroupManagerRequest
                     .newBuilder()
